@@ -5,38 +5,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
+    android:background="#01BCD4"
     tools:context="com.example.jeon_yongjin.bedcontroller.MainActivity">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+
+    <FrameLayout
+        android:layout_gravity="center"
+        android:id="@+id/humanfragment"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/humanlayout">
+        android:layout_weight="1"
+        >
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="452dp"
             android:layout_height="wrap_content"
             android:id="@+id/human"
-            app:srcCompat="@mipmap/human"/>
+            android:src="@mipmap/human"/>
 
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="454dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/dot"
+                android:src="@drawable/greencircle"/>
+        </FrameLayout>
 
-    </LinearLayout>
-
+    </FrameLayout>
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="763dp"
         android:layout_height="match_parent"
         android:orientation="vertical">
         <FrameLayout
             android:id="@+id/time_status"
-            android:layout_width="match_parent"
+            android:layout_width="772dp"
             android:layout_height="150dp"
-            android:layout_weight="1"
-            android:layout_alignRight="@id/humanlayout"
+            android:layout_weight="1.00"
             android:layout_toEndOf="@+id/humanlayout"></FrameLayout>
+
+
         <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_weight="1"
+            android:layout_width="752dp"
+            android:layout_height="328dp"
             android:id="@+id/history_status"
-            android:layout_alignBottom="@+id/time_status"></FrameLayout>
+            android:layout_alignBottom="@+id/time_status"
+            android:layout_weight="0.19"></FrameLayout>
 
     </LinearLayout>
 
